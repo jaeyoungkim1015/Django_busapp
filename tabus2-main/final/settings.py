@@ -23,9 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'n_p*r7$div*ar9zvrb=q7_4k+b5)5r#_0dgl23nm8vxcx)k6!h'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['*'
+ALLOWED_HOSTS = ['(pythonanywhere baby0104).pythonanywhere.com'
                  ]
 
 
