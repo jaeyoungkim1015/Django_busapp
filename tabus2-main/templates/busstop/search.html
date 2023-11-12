@@ -7,17 +7,17 @@
         <div class="top-background"
 
              style="
-                     background-image: url({% static 'img/마스크 그룹 5@2x.png' %})">
+                     background-image: url({% static 'img/지도.png' %})">
             <form method="get">
                 <div class="input_box">
                     {% if recent_key %}
-                        <input class="text_custom form-control" placeholder="'호암초등학교'정류장 검색결과"
+                        <input class="text_custom form-control" placeholder="'경복궁역'정류장 검색결과"
                                onclick=" clickHandle(this,'search')"
                                value={{ recent_key }} type="search" name="keyword"
                                id="keyword" class="form-control">
                     {% else %}
-                        <input class="text_custom form-control" placeholder="'호암초등학교'정류장 검색결과" type="search"
-                               value="호원고교" onclick=" clickHandle(this,'search')"
+                        <input class="text_custom form-control" placeholder="'경복궁역'정류장 검색결과" type="search"
+                               value="경복궁역" onclick=" clickHandle(this,'search')"
                                name="keyword" id="keyword"
                                class="form-control">
                     {% endif %}
