@@ -23,10 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'n_p*r7$div*ar9zvrb=q7_4k+b5)5r#_0dgl23nm8vxcx)k6!h'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['*'
-                 ]
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -42,8 +41,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 ]
-TMAP_APP_KEY = 'l7xxb06b75b17d194ea8adcb83bfec85c97c'
+
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -52,6 +52,8 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
+
 
 ROOT_URLCONF = 'final.urls'
 
@@ -148,10 +150,12 @@ TEMPLATES = [
         },
     },
 ]
+
 CORS_ORIGIN_ALLOW_ALL = True
 CORS_ALLOW_CREDENTIALS = True
 CORS_ORIGIN_WHITELIST = [
     'http://127.0.0.1:8000',
+    'http://172.16.110.192:8080',
     # 각종 필요한 도메인들
-    'http://openapi.gbis.go.kr'
+   'http://openapi.gbis.go.kr'
 ]
